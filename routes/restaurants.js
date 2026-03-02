@@ -12,4 +12,4 @@ router.route('/:id')
     .put(protect ,authorize('admin') ,updateRestaurant)
     .delete(protect ,authorize('admin') ,deleteRestaurant);
 
-module.exports = router;    
+module.exports = router;

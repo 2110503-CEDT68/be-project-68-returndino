@@ -10,6 +10,7 @@ const { connect } = require('mongoose');
 //route file
 const auth = require('./routes/auth');
 const restaurants = require('./routes/restaurants');
+const reservations = require('./routes/reservations');
 
 dotenv.config({path : './config/config.env'});
 
@@ -22,6 +23,7 @@ app.use(cookieParser()); //cookie parser
 
 app.use('/api/v1/auth', auth);
 app.use('/api/v1/restaurants' ,restaurants);
+app.use('/api/v1/reservations', reservations);
 
 const PORT = process.env.PORT || 5000;
 
